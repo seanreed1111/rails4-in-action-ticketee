@@ -1,0 +1,28 @@
+/ new.html.haml
+/ “<h1>New Project</h1>
+/ <%= form_for(@project) do |f| %>
+/   <p>
+/     <%= f.label :name %><br>
+/     <%= f.text_field :name %>
+/   </p>”
+
+/ <p>
+/   <%= f.label :description %><br>
+/   <%= f.text_field :description %>
+/ </p>
+
+/ <%= f.submit %>
+/ <% end %>”
+%h1 New Project
+=form_for @project do |f|
+  %p
+    = f.label :name
+    %br
+    =f.text_field :name
+    %br
+  %p
+    =f.label :description
+    %br
+    =f.text_field :description
+  = f.submit "Create Project"
+
