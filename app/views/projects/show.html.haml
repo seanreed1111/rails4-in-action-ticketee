@@ -1,8 +1,10 @@
-/ show.html.haml
 = title(@project.name, "Projects")
-= link_to "Edit Project", edit_project_path(@project)
-= link_to "Delete Project", project_path(@project),method: :delete, data:{confirm: "Are you sure you want to delete this project?"}
-%h1
-  = @project.name
+.header
+  %h1= @project.name
+
+  %ul.actions
+    %li= link_to "Edit Project", edit_project_path(@project), class: "edit"
+    %li= link_to "Delete Project", project_path(@project), method: :delete, data:{confirm: "Are you sure you want to delete this project?"}, class: "delete"
+
 %p
   = @project.description

@@ -76,6 +76,8 @@ GEM
       railties (>= 3.0.0)
     ffaker (2.2.0)
     ffi (1.9.10)
+    font-awesome-rails (4.5.0.1)
+      railties (>= 3.2, < 5.1)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     haml (4.0.7)
@@ -186,6 +188,9 @@ GEM
       rubyzip (~> 1.0)
       websocket (~> 1.0)
     sexp_processor (4.7.0)
+    simple_form (3.1.0)
+      actionpack (~> 4.0)
+      activemodel (~> 4.0)
     slop (3.6.0)
     spring (1.7.1)
     sprockets (3.6.0)
@@ -224,6 +229,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   factory_girl_rails
   ffaker
+  font-awesome-rails
   haml-rails
   jbuilder (~> 2.0)
   jquery-rails
@@ -234,6 +240,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   selenium-webdriver
+  simple_form
   spring
   sqlite3
   turbolinks
