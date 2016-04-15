@@ -2,6 +2,7 @@
 @import "bootstrap";
 @import "font-awesome";
 @import "projects";
+@import "responsive";
 
 header {
   @extend .page-header;
@@ -61,4 +62,8 @@ a.delete {
 
 .alert-alert {
   @extend .alert-danger;
+}
+
+body {
+  padding-top: 60px;
 }

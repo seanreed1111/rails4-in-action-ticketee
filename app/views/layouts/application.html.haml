@@ -1,6 +1,7 @@
 !!!
 %html
   %head
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1"}
     %title
       - if content_for?(:title)
         = yield(:title)
@@ -10,6 +11,23 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
+    %nav.navbar.navbar-default.navbar-fixed-top{:role => "navigation"}
+      .container
+        .navbar-header
+          = link_to "Ticketee", root_path, class: "navbar-brand"
+          %button.navbar-toggle.collapsed{"data-target" => "#collapse", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+
+        #collapse.collapse.navbar-collapse
+          %ul.nav.navbar-nav
+            -if current_page?("/")
+              %li.active= link_to "Home", root_path
+            -else
+              %li= link_to "Home", root_path
+
     .container
       - flash.each do |key, message|
         %div{:class => "alert alert-#{key}"}
