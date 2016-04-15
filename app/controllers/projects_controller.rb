@@ -25,4 +25,9 @@ class ProjectsController < ApplicationController
   def project_params
     params.require(:project).permit(:name, :description)
   end
+
+  def index
+    @projects = Project.all
+  end
+
 end

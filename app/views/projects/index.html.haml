@@ -1,2 +1,7 @@
-/ index.html.haml
+%h1 Projects
 = link_to "New Project", new_project_path
+#projects
+  - @projects.each do |project|
+    %h3= link_to project.name, project
+    = succeed "" do
+      %p= project.description
