@@ -1,5 +1,5 @@
 = title(@project.name, "Projects")
-.header
+%header
   %h1= @project.name
 
   %ul.actions
@@ -9,8 +9,15 @@
 %p
   = @project.description
 
-.header
+%header
   %h2 
     Tickets
     %ul.actions
       %li= link_to " New Ticket", new_project_ticket_path(@project), class: "new"
+
+%ul#ticket
+  -@project.tickets.each do |ticket|
+    %li
+      =ticket.id
+      =succeed("") do
+        =link_to ticket.name, [@project, ticket]
