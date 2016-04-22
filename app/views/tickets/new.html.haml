@@ -1,0 +1,8 @@
+/ new.html.haml
+%header
+  %h1
+    New Ticket for
+    %h3
+      =@project.name
+
+=render "form", project: @project, ticket: @ticket

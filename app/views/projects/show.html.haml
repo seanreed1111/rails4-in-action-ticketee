@@ -8,3 +8,9 @@
 
 %p
   = @project.description
+
+.header
+  %h2 
+    Tickets
+    %ul.actions
+      %li= link_to " New Ticket", new_project_ticket_path(@project), class: "new"
