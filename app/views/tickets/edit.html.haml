@@ -1,0 +1,9 @@
+/ edit.html.haml
+%header
+  %h1
+    Edit Ticket for 
+    =succeed("") do
+      %h3
+        =@project.name
+
+=render "form", project: @project, ticket: @ticket
