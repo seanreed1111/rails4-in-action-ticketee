@@ -50,6 +50,7 @@ gem 'haml-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem 'simple_form'
+gem 'devise', "~> 3.4.1"
 
 group :development, :test do
   gem 'rspec-rails'
