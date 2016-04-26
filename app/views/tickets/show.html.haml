@@ -3,6 +3,18 @@
 #ticket
   %header
     %h1=@project.name
+  %table#attributes
+    %tr
+      %th 
+        Author:
+        =succeed("") do
+          %td
+            = @ticket.author.email
+    %tr
+      %th 
+        Created: 
+        =succeed(" ago") do
+          %td= time_ago_in_words(@ticket.created_at)
 
   %header
     %h2=@ticket.name

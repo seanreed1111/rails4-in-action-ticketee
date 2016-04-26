@@ -31,6 +31,8 @@ class TicketsController < ApplicationController
 
   def create
     @ticket = @project.tickets.build(ticket_params)
+    @ticket.author = current_user
+    print "current user is #{current_user}"
 
     if @ticket.save
       flash[:notice] = "Ticket has been created."
@@ -51,6 +53,6 @@ class TicketsController < ApplicationController
   end
 
   def ticket_params
-    params.require(:ticket).permit(:name, :description)
+    params.require(:ticket).permit(:name, :description, :author, :user)
   end
 end
