@@ -1,0 +1,6 @@
+/ _form.html.haml
+=simple_form_for [:admin, user] do |f|
+  =f.input :email
+  =f.input :password
+
+  =f.button :submit, class: "btn btn-primary"

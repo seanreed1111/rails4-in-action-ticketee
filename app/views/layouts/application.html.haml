@@ -27,6 +27,10 @@
               %li.active= link_to "Home", root_path
             -else
               %li= link_to "Home", root_path
+
+            -admins_only do
+              %li=link_to "Admin", admin_root_path
+
             -unless user_signed_in?
               -if current_page?("/users/sign_up")
                 %li.active= link_to "Sign up", new_user_registration_path
