@@ -47,7 +47,7 @@ group :development do
 end
 
 
-gem 'haml-rails'
+gem 'haml-rails', '~> 0.9.0'
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem 'simple_form'
